@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather APP</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search">
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Add location here..."
+        />
+      </div>
+      <div class="data-container">
+        <div class="location">
+          <p class="city"></p>
+          <p class="country"></p>
+          <p class="local-date"></p>
+          <p class="local-time"></p>
+        </div>
+        <div class="weather">
+          <div class="temp-container">
+            <h5>Current:</h5>
+            <p class="temp"></p>
+            <h5>Feels like:</h5>
+            <p class="feels-temp"></p>
+          </div>
+          <div class="condition-container">
+            <p class="condition"></p>
+            <p class="condition-icon">
+              <img class="condition-image" src="" alt="ICON" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
