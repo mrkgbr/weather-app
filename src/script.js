@@ -9,11 +9,15 @@ const condition = document.querySelector(".condition");
 const conditionIcon = document.querySelector(".condition-image");
 
 async function getWeatherData(location) {
-  const response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=6c1d98490ab649898c675305231005&q=${location}&aqi=no`
-  );
-  const weatherData = response.json();
-  return weatherData;
+  try {
+    const response = await fetch(
+      `http://api.weatherapi.com/v1/current.json?key=6c1d98490ab649898c675305231005&q=${location}&aqi=no`
+    );
+    const weatherData = response.json();
+    return weatherData;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function fillHTML(data) {
@@ -29,10 +33,14 @@ function fillHTML(data) {
 }
 
 async function setWeatherData(loc) {
-  // get weather data
-  const data = await getWeatherData(loc);
-  // fill html with data
-  fillHTML(data);
+  try {
+    // get weather data
+    const data = await getWeatherData(loc);
+    // fill html with data
+    fillHTML(data);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 input.addEventListener("keypress", (e) => {
