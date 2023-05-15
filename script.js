@@ -11,7 +11,7 @@ const conditionIcon = document.querySelector(".condition-image");
 async function getWeatherData(location) {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=6c1d98490ab649898c675305231005&q=${location}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=6c1d98490ab649898c675305231005&q=${location}&aqi=no`
     );
     const weatherData = response.json();
     return weatherData;
